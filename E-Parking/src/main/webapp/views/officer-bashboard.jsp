@@ -7,9 +7,11 @@
 	type=”text/css” />
 <script type=”text/javascript” src=”bootstrap/js/bootstrap.min.js”></script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Officer</title>
 </head>
 <body>
-	
+	<jsp:include page="/include/header.jsp" />
+	<div>Hello Driver</div>
+	<jsp:include page="/include/footer.jsp" />
 </body>
 </html>
