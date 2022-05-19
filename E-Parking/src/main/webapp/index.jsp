@@ -44,7 +44,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -53,15 +53,15 @@
 				<div class="modal-body">
 					<form action="LoginController" method="post">
 						<div class="form-group">
-							<label for="exampleInputEmail1">Email address or Username</label>
+							<label for="email">Email address</label>
 							<input type="email" name="email" class="form-control"
-								id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="Enter email or Username">
+								id="email" aria-describedby="emailHelp"
+								placeholder="example@gmail.com">
 						</div>
 						<div class="form-group">
-							<label for="exampleInputPassword1">Password</label> <input
+							<label for="password">Password</label> <input
 								type="password" name="password" class="form-control"
-								id="exampleInputPassword1" placeholder="Password">
+								id="password" placeholder="Password">
 						</div>
 						<label class="control-label">Select Type</label>
 						<div class="form-group">
@@ -98,6 +98,17 @@
 				</div>
 				<div class="modal-body">
 					<form>
+					
+						<div class="form-group">
+							<label for="exampleInputEmail1">Firstname</label> <input
+								type="email" class="form-control" id="firstname"
+								aria-describedby="emailHelp" placeholder="Enter firstname">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Lastname</label> <input
+								type="email" class="form-control" id="lastname"
+								aria-describedby="emailHelp" placeholder="Enter lastname">
+						</div>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label> <input
 								type="email" class="form-control" id="exampleInputEmail1"
@@ -110,10 +121,15 @@
 								type="password" class="form-control" id="exampleInputPassword1"
 								placeholder="Password">
 						</div>
-						<div class="form-check">
-							<input type="checkbox" class="form-check-input"
-								id="exampleCheck1"> <label class="form-check-label"
-								for="exampleCheck1">Check me out</label>
+						<label class="control-label">Select Type</label>
+						<div class="form-group">
+						<div class="col-sm-6">
+						<select name="role" class="form-select" aria-label="Default select example">
+							<option selected="selected">- Select Role -</option>
+							<option value="officer">Officer</option>
+							<option value="driver">Driver</option>
+						</select>
+						</div>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary"
