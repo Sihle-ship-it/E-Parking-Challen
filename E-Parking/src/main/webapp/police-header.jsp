@@ -1,4 +1,9 @@
- <jsp:include page="/include/heade.jsp" />
+<%@page import="com.eparking.dao.*"%>
+<%@page import="com.eparking.entity.*"%>
+<%
+	Login user = (Login) request.getSession().getAttribute("user"); 
+%>
+<jsp:include page="/include/heade.jsp" />
 
 <div class="wrapper">	
 		<header>
@@ -49,7 +54,7 @@
 					<div class="user-account">
 						<div class="user-info">
 							<img src="images/user.png" alt="">
-							<a href="#" title="">Police Officer</a>
+							<a href="#" title=""><%= user.getFirstname() %></a>
 							<i class="la la-sort-down"></i>
 						</div>
 						

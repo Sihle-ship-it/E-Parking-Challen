@@ -43,13 +43,14 @@ public class LoginController extends HttpServlet {
 		
 		if(!status.equals(null)) {
 
-			if(role=="officer"){
+			if(role.equals("officer")){
+				session.setAttribute("user", status);
 				//session.setAttribute("officer_login", login.getEmail());
-			response.sendRedirect("police-dashboard.jsp");
+				response.sendRedirect("police-dashboard.jsp");
 			}
 			
 			if(role.equals("driver")) {
-				
+				System.out.println(status);
 				session.setAttribute("user", status);
 				//session.setAttribute("driver_login", login.getEmail());
 				//RequestDispatcher dispatcher = request.getRequestDispatcher("driver-dashboard.jsp");
