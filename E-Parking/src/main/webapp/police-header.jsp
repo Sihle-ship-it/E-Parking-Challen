@@ -1,15 +1,11 @@
-<%@page import="com.eparking.dao.*"%>
-<%@page import="com.eparking.entity.*"%>
-<%
-	Login user = (Login) request.getSession().getAttribute("user"); 
-%>
-<jsp:include page="/include/heade.jsp" />
+ <jsp:include page="/include/heade.jsp" />
+
 <div class="wrapper">	
 		<header>
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="driver-dashboard.jsp" title=""><img src="images/Eparking_logo.PNG" alt="" class ="logo"></a>
+						<a href="police-dashboard.jsp" title=""><img src="images/Eparking_logo.PNG" alt="" class ="logo"></a>
 					</div><!--logo end-->
 					<div class="search-bar">
 						<form>
@@ -20,32 +16,30 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="driver-dashboard.jsp" title="">
+								<a href="police-dashboard.jsp" title="">
 									<span><img src="images/icon1.png" alt=""></span>
 									Home
 								</a>
 							</li>
 							
 							<li>
-								<a href="payment.jsp" title="">
-									<span><img src="images/icon3.png" alt=""></span>
-									Payment
+								<a href="police-report.jsp" title="">
+									<span><img src="images/icon7.png" alt=""></span>
+								      Violation
 								</a>
 							</li>
 							
-							<li>
-								<a href="driver-report.jsp" title="">
-									<span><img src="images/icon5.png" alt=""></span>
-									Violation History
-								</a>
-							</li>
 							
-							<li>
-								<a href="driver-account-setting.jsp" title="">
+							
+								<li>
+								<a href="police-account-setting.jsp" title="">
 									<span><img src="images/icon3.png" alt=""></span>
 									Account Setting
 								</a>
 								</li>
+								
+							
+							
 							
 						</ul>
 					</nav><!--nav end-->
@@ -55,7 +49,7 @@
 					<div class="user-account">
 						<div class="user-info">
 							<img src="images/user.png" alt="">
-							<a href="#" title=""><%= user.getFirstname() %></a>
+							<a href="#" title="">Police Officer</a>
 							<i class="la la-sort-down"></i>
 						</div>
 						
@@ -68,6 +62,8 @@
 									<button type="submit">Ok</button>
 								</form>
 							</div><!--search_form end-->
+							
+							
 							
 							<h3 class="tc"><a href="index.jsp" title="">Logout</a></h3>
 						</div><!--user-account-settingss end-->

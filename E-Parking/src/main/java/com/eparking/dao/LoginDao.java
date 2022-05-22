@@ -13,20 +13,17 @@ public class LoginDao {
 	Connection connection;
 	Statement statement = null;
 	ResultSet resultSet = null;
+	Login user = null;
 
-	public String authorizeLogin(Login login) {
+	public Login authorizeLogin(Login login) {
 		
 		String email = login.getEmail();
 		String password = login.getPassword();
 		String role = login.getRole();
-
-		String dbpassword = null;
-		String dbemail = null;
-		String dbrole = null;
+		
 		
 		String sql = "SELECT * FROM users WHERE email=? and password=? and role=?";
 		try {
-			System.out.println("2: "+connection);
 			connection = DBConnectionUtil.openConnection();
 			
 			PreparedStatement ps = connection.prepareStatement(sql);
@@ -36,15 +33,18 @@ public class LoginDao {
 			
 			resultSet = ps.executeQuery();
 			
-			if(resultSet.next()) {
-				System.out.println("Its true");
-				return "true";
-			}else {
-				return "false";
+			while(resultSet.next()) {
+				user = new Login();
+				user.setFirstname(resultSet.getString("firstname"));
+				user.setLastname(resultSet.getString("lastname"));
+				user.setEmail(resultSet.getString("email"));
+				user.setRole(resultSet.getString("role"));
+				
+				System.out.println(user.getFirstname());	
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "error";
+		return user;
 	}
 }

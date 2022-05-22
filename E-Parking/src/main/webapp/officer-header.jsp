@@ -1,16 +1,11 @@
-<%@page import="com.eparking.dao.*"%>
-<%@page import="com.eparking.entity.*"%>
-<%
-	Login user = (Login) request.getSession().getAttribute("user"); 
-%>
-<jsp:include page="/include/heade.jsp" />
-<div class="wrapper">	
+ <jsp:include page="/include/heade.jsp" />
+	<div class="wrapper">	
 		<header>
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="driver-dashboard.jsp" title=""><img src="images/Eparking_logo.PNG" alt="" class ="logo"></a>
-					</div><!--logo end-->
+						<a class="navbar-brand" href="index.html"><span>E</span>-parking</a> 
+						</div><!--logo end-->
 					<div class="search-bar">
 						<form>
 							<input type="text" name="search" placeholder="Search...">
@@ -20,48 +15,41 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="driver-dashboard.jsp" title="">
+								<a href="police-dashboard.jsp" title="">
 									<span><img src="images/icon1.png" alt=""></span>
 									Home
 								</a>
 							</li>
-							
 							<li>
-								<a href="payment.jsp" title="">
+								<a href="center.php" title="">
+									<span><img src="images/icon2.png" alt=""></span>
+									About Us
+								</a>
+							</li>
+							<li>
+								<a href="project.php" title="">
 									<span><img src="images/icon3.png" alt=""></span>
-									Payment
+									Profiles
 								</a>
 							</li>
 							
-							<li>
-								<a href="driver-report.jsp" title="">
-									<span><img src="images/icon5.png" alt=""></span>
-									Violation History
-								</a>
-							</li>
 							
-							<li>
-								<a href="driver-account-setting.jsp" title="">
-									<span><img src="images/icon3.png" alt=""></span>
-									Account Setting
-								</a>
-								</li>
+							
 							
 						</ul>
 					</nav><!--nav end-->
 					<div class="menu-btn">
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--menu-btn end-->
+					
 					<div class="user-account">
 						<div class="user-info">
-							<img src="images/user.png" alt="">
-							<a href="#" title=""><%= user.getFirstname() %></a>
+							<img src="images/resources/user.png" alt="">
+							<!--  <a href="#" title="">John</a>-->
 							<i class="la la-sort-down"></i>
 						</div>
-						
 						<div class="user-account-settingss" id="users">
 							
-							<h3>Custom Status</h3>
 							<div class="search_form">
 								<form>
 									<input type="text" name="search">
@@ -69,10 +57,13 @@
 								</form>
 							</div><!--search_form end-->
 							
-							<h3 class="tc"><a href="index.jsp" title="">Logout</a></h3>
+							
+							<h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
 						</div><!--user-account-settingss end-->
 					</div>
 				</div><!--header-data end-->
 			</div>
-		</header><!--header end-->	
+		</header>
 	</div>
+			
+	 <jsp:include page="/include/foote.jsp" />

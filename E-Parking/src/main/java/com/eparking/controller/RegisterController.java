@@ -30,18 +30,8 @@ public class RegisterController extends HttpServlet {
 		
 		if(registerValidate.equals("Success register")) {
 			
-			if(register.getRole()=="officer"){
-				//session.setAttribute("officer_login", login.getEmail());
-			response.sendRedirect("officer-dashboard.jsp");
-			}
+			response.sendRedirect("index.jsp?status=true");
 			
-			if(register.getRole().equals("driver")) {
-				//session.setAttribute("driver_login", login.getEmail());
-				//request.getRequestDispatcher("driver-dashboard.jsp");
-				
-				System.out.println("This is where we end up");
-				response.sendRedirect("driver-dashboard.jsp");
-			}
 		}
 		if(registerValidate.equals("fail register")){
 			response.sendRedirect("index.jsp?status=false");	

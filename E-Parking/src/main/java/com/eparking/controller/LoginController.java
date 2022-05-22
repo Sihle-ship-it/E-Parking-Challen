@@ -22,7 +22,8 @@ public class LoginController extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String role = request.getParameter("role");
-		HttpSession session;
+		HttpSession session = request.getSession();
+		
 		
 //		if(session.getAttribute("offer_login")!=null) {
 //			response.sendRedirect("officer-dashboard.jsp");
@@ -38,24 +39,26 @@ public class LoginController extends HttpServlet {
 		
 		LoginDao loginDao = new LoginDao();
 		
-		String status = loginDao.authorizeLogin(login);
+		Login status = (Login) loginDao.authorizeLogin(login);
 		
-		if(status.equals("true")) {
+		if(!status.equals(null)) {
 
 			if(role=="officer"){
 				//session.setAttribute("officer_login", login.getEmail());
-			response.sendRedirect("officer-dashboard.jsp");
+			response.sendRedirect("police-dashboard.jsp");
 			}
 			
 			if(role.equals("driver")) {
-				//session.setAttribute("driver_login", login.getEmail());
-				//request.getRequestDispatcher("driver-dashboard.jsp");
 				
+				session.setAttribute("user", status);
+				//session.setAttribute("driver_login", login.getEmail());
+				//RequestDispatcher dispatcher = request.getRequestDispatcher("driver-dashboard.jsp");
+				//dispatcher.forward(request, response);
 				response.sendRedirect("driver-dashboard.jsp");
 			}
 		}
 		
-		if(status.equals("false")){
+		if(status.equals(null)){
 			response.sendRedirect("index.jsp?status=false");	
 		}
 		

@@ -1,8 +1,6 @@
 <jsp:include page="police-header.jsp" />
 
 
-
-
 		<main>
             <div class="main-section">
                 <div class="container">
@@ -16,7 +14,7 @@
                                   
 									 <div class="colHead">
 									 	
-											<h3>Add a new violation</h3>
+											<h3>Edit violation</h3>
 										 
 									 </div>
 									<div class="post-project-fields">
@@ -97,7 +95,7 @@
 										<div class="col-lg-12">
 			
 											<ul>
-												<li><input type="submit" class="active btnRegister" name="add-violation"  value="Submit"/></li>
+												<li><input type="submit" class="active btnRegister" name="Edit-violation"  value="Submit"/></li>
 												<!-- <li><a href="#" title="">Cancel</a></li> -->
 											</ul>
 										</div>

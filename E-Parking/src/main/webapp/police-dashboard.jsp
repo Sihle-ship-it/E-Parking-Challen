@@ -1,11 +1,4 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.Import"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-<%@page import="com.eparking.dao.*"%>
-<%@page import="com.eparking.entity.*"%>
-<%
-	Login user = (Login) request.getSession().getAttribute("user"); 
-%>
-<jsp:include page="driver-header.jsp" />
+<jsp:include page="police-header.jsp" />
 		<main>
 			<div class="main-section">
 				<div class="container">
@@ -19,6 +12,7 @@
 												<div class="usr-pic">
 													<img src="images/prof_user.jpg" alt="">
 												</div>
+												Officer Identification
 											</div><!--username-dt end-->
 											
 										</div><!--user-profile end-->
@@ -27,7 +21,7 @@
 									</div><!--user-data end-->
 									<div class="suggestions full-width">
 										<div class="sd-title">
-											<h3>Checking my fines</h3>
+											<h3>Tshwane Metro Police</h3>
 											<i class="la la-ellipsis-v"></i>
 										</div><!--sd-title end-->
 										<div class="suggestions-list">
@@ -35,7 +29,7 @@
 												<img src="images/resources/gio.png" alt="" width="30%">
 												<div class="sgt-text">
 													
-													<span>You need to add car identification numbers to your account before making use of this service</span>
+													<span>Our mission is to keep Tshwane safe for everyone and ensure that parking policies are followed </span>
 												</div>
 												
 											</div>
@@ -72,7 +66,7 @@
 										</div>
 										<div class="post-st">
 											<ul>
-												<li><a class="post_project" href="payment.jsp" title="">Make Payment</a></li>
+												<li><a class="post_project" href="add-violation.jsp" title="">New Violation</a></li>
 												
 											</ul>
 										</div><!--post-st end-->
@@ -83,7 +77,7 @@
 												<div class="usy-dt">
 													<img src="images/resources/gab.PNG" alt="" width="50%">
 													<div class="usy-name">
-														<h3>Paying my fines</h3>
+														<h3>Register a parking Violation</h3>
 														
 													</div>
 												</div>
@@ -99,19 +93,17 @@
 												</div>
 											</div>
 											<div class="epi-sec">
-												
-												<ul class="bk-links">
+
+										 <ul class="bk-links">
 													
-													<li><a href="driver-report.jsp" title=""><i class="la la-envelope"></i></a></li>
-												</ul>
-											</div>
+													<li><a href="police-report.jsp" title=""><i class="la la-envelope"></i></a></li>
+												</ul> 
+									</div>
 											<div class="job_descp">
 												
-												<p>  If you have received a fine you should always try to pay
-												 it before the due date or it will be added in your annual taxes.
-												 If you have received a South African Police expiation notice that is not yet overdue,
-												  you can pay in full by clicking the make payment button.
-												  You can also view and download your violation and payment report by clicking on the icon above. 
+												<p>  Every car parked in the wrong parking must be taken by the police.
+												As a police officer you need to add the picture of the car taken and the driver information in the database, then send a fine payment message to the owner.
+												Click the new violation button above to register violation. You can also click on the red envelop to view all traffic violations.
 												  <a href="#" title="">view more</a></p>
 												
 											</div>
@@ -122,16 +114,10 @@
 										<div class="posty">
 											
 											<div class="comment-section">
-												
-												
-												<div class="post-comment">
+													<div class="post-comment">
+											
 													
-													<div class="comment_box">
-														<form>
-															<input type="text" placeholder="Enter registration No">
-															<button type="submit">Submit</button>
-														</form>
-													</div>
+													
 												</div><!--post-comment end-->
 											</div><!--comment-section end-->
 										</div><!--posty end-->
@@ -171,9 +157,6 @@
 				</div> 
 			</div>
 		</main>
-
-
-
 
 
 
