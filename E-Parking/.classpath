@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/JAVA Library/mysql-connector-java-8.0.29.jar"/>
+	<classpathentry kind="lib" path="C:/JAVA Library/jakarta.mail-2.0.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
