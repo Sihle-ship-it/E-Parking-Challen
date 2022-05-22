@@ -90,35 +90,35 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<form>
+					<form action="RegisterController" method="post">
 					
 						<div class="form-group">
 							<label for="exampleInputEmail1">Firstname</label> <input
-								type="email" class="form-control" id="firstname"
+								type="text" name="firstname" class="form-control" id="firstname"
 								aria-describedby="emailHelp" placeholder="Enter firstname">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Lastname</label> <input
-								type="email" class="form-control" id="lastname"
+								type="text" name="lastname" class="form-control" id="lastname"
 								aria-describedby="emailHelp" placeholder="Enter lastname">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label> <input
-								type="email" class="form-control" id="exampleInputEmail1"
+								type="email" name="email" class="form-control" id="email"
 								aria-describedby="emailHelp" placeholder="Enter email">
 							<small id="emailHelp" class="form-text text-muted">Register
 								here.</small>
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Password</label> <input
-								type="password" class="form-control" id="exampleInputPassword1"
+								type="password" name="password" class="form-control" id="exampleInputPassword1"
 								placeholder="Password">
 						</div>
 						<label class="control-label">Select Type</label>

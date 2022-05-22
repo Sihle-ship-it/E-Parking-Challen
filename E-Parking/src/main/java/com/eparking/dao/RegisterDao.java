@@ -10,7 +10,7 @@ public class RegisterDao {
 	Connection connection;
 	public String authorizeRegister(Register register) {
 		
-		String sql = "INSERT INTO users(firstname,lastname,email,password,role) (?,?,?,?,?)";
+		String sql = "INSERT INTO users(firstname,lastname,email,password,role) VALUES(?,?,?,?,?)";
 		
 		try {
 			connection = DBConnectionUtil.openConnection();

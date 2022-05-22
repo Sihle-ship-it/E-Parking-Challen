@@ -41,7 +41,7 @@ public class LoginController extends HttpServlet {
 		String status = loginDao.authorizeLogin(login);
 		
 		if(status.equals("true")) {
-			System.out.println("Status is true"+ role +" = "+login.getRole());
+
 			if(role=="officer"){
 				//session.setAttribute("officer_login", login.getEmail());
 			response.sendRedirect("officer-dashboard.jsp");
@@ -51,7 +51,6 @@ public class LoginController extends HttpServlet {
 				//session.setAttribute("driver_login", login.getEmail());
 				//request.getRequestDispatcher("driver-dashboard.jsp");
 				
-				System.out.println("This is where we end up");
 				response.sendRedirect("driver-dashboard.jsp");
 			}
 		}
